@@ -18,6 +18,14 @@
   </style>
 </head>
 <body>
-  <iframe src="Fitness_Tracker_PCB.pdf"></iframe>
+
+<iframe id="viewer"></iframe>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const pdf = params.get("pdf") || "Fitness_Tracker_PCB.pdf";
+  document.getElementById("viewer").src = pdf;
+</script>
+
 </body>
 </html>
